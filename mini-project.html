@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Projects | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+    body { margin: 0; background: #fafafa; font-family: 'Poppins', sans-serif; color: #1a1a1a; overflow-x: hidden; }
+    
+    header { display: flex; align-items: center; gap: 20px; padding: 40px 70px; }
+    header .line { height: 1px; width: 200px; background: #000; }
+    header a { text-decoration: none; color: inherit; font-size: 16px; transition: 0.3s; }
+    header a:hover { transform: skew(-10deg); font-weight: 500; }
+
+    .page-content { padding: 0 70px 80px; max-width: 1200px; margin: 0 auto; }
+    .page-title { font-family: 'Playfair Display', serif; font-size: 70px; font-weight: 500; text-align: center; margin-bottom: 20px; }
+    .page-subtitle { text-align: center; opacity: 0.7; margin-bottom: 60px; font-size: 15px;}
+    
+    /* MINI PROJECTS GRID */
+    .mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .mini-card { border: 1px solid #e0e0e0; padding: 30px; border-radius: 12px; transition: 0.3s ease; background: #fff;}
+    .mini-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: #000; }
+    .mini-icon { font-size: 30px; color: #999; margin-bottom: 20px; }
+    .mini-title { font-family: 'Playfair Display', serif; font-size: 22px; margin: 0 0 10px; }
+    .mini-desc { font-size: 13px; line-height: 1.6; opacity: 0.7; margin-bottom: 20px; }
+    .mini-link { font-size: 13px; font-weight: 500; text-decoration: none; color: #000; border-bottom: 1px solid #000; padding-bottom: 2px; transition: 0.3s;}
+    .mini-link:hover { opacity: 0.6; }
+
+    .year { position: fixed; left: 25px; bottom: 50%; transform: rotate(-90deg); font-size: 14px; letter-spacing: 2px; opacity: 0.6; }
+    
+    @media(max-width: 768px) {
+        header { padding: 30px; }
+        header .line { width: 100px; }
+        .page-content { padding: 0 30px 50px; }
+        .page-title { font-size: 45px; }
+    }
+  </style>
+</head>
+<body>
+    <header>
+      <a href="index.html">Home</a>
+      <div class="line"></div>
+      <div>Mini Projects</div>
+    </header>
+
+    <section class="page-content">
+        <h1 class="page-title" data-aos="fade-down">Experiments</h1>
+        <p class="page-subtitle" data-aos="fade-up" data-aos-delay="50">A collection of small projects, UI challenges, and code snippets.</p>
+        
+        <div class="mini-grid">
+            <div class="mini-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-cloud-sun mini-icon"></i>
+                <h3 class="mini-title">Weather App</h3>
+                <p class="mini-desc">Simple weather forecast web app fetching data from OpenWeather API in real-time.</p>
+                <a href="#" class="mini-link">View Demo</a>
+            </div>
+            <div class="mini-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-calculator mini-icon"></i>
+                <h3 class="mini-title">Neumorphic Calc</h3>
+                <p class="mini-desc">A calculator UI experiment using pure CSS Neumorphism design trend without images.</p>
+                <a href="#" class="mini-link">View Demo</a>
+            </div>
+            <div class="mini-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-list-check mini-icon"></i>
+                <h3 class="mini-title">Task Manager</h3>
+                <p class="mini-desc">Vanilla JS To-Do list application featuring drag-and-drop functionality between columns.</p>
+                <a href="#" class="mini-link">View Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="year">2026</div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });</script>
+</body>
+</html>
